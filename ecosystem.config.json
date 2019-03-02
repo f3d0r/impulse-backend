@@ -46,7 +46,7 @@
             }
         },
         "dev": {
-            "user": "fedor",
+            "user": "yohan",
             "host": ["SOMEIP"],
             "ref": "origin/dev",
             "repo": "git@github.com:f3d0r/impuls-backend.git",
