@@ -1,6 +1,7 @@
-var router = require('express').Router();
 const constants = require('../config');
+const mainEndpoints = require('./api/main');
+const router = require('express').Router();
 
-router.use(constants.express.GLOBAL_ENDPOINT + '/', require('./api/main'));
+router.use(`${constants.express.GLOBAL_ENDPOINT}/`, mainEndpoints);
 
 module.exports = router;

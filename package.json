@@ -1,38 +1,108 @@
 {
+    "dependencies": {
+        "axios": "^0.18.0",
+        "body-parser": "^1.18.3",
+        "connect-timeout": "^1.9.0",
+        "cors": "^2.8.5",
+        "express": "^4.16.4",
+        "express-cluster": "0.0.5",
+        "express-toobusy": "0.0.3",
+        "helmet": "^3.16.0",
+        "mysql": "^2.16.0",
+        "os": "^0.1.1",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.4",
+        "response-time": "^2.3.2",
+        "unique-string": "^1.0.0"
+    },
+    "devDependencies": {
+        "ajv": "^6.10.0",
+        "eslint": "^5.15.3",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-config-prettier": "^4.1.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-json": "^1.4.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-react": "^7.12.4",
+        "eslint-plugin-sort-requires": "^2.1.0",
+        "prettier": "^1.16.4"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": false,
+            "commonjs": true,
+            "es6": true,
+            "node": true
+        },
+        "extends": [
+            "airbnb",
+            "plugin:node/recommended",
+            "prettier"
+        ],
+        "globals": {
+            "Atomics": "readonly",
+            "SharedArrayBuffer": "readonly"
+        },
+        "parserOptions": {
+            "ecmaVersion": 9
+        },
+        "plugins": [
+            "prettier",
+            "json",
+            "sort-requires"
+        ],
+        "rules": {
+            "import/order": 0,
+            "node/exports-style": [
+                "error",
+                "module.exports"
+            ],
+            "node/prefer-global/buffer": [
+                "error",
+                "always"
+            ],
+            "node/prefer-global/console": [
+                "error",
+                "always"
+            ],
+            "node/prefer-global/process": [
+                "error",
+                "always"
+            ],
+            "node/prefer-global/url": [
+                "error",
+                "always"
+            ],
+            "node/prefer-global/url-search-params": [
+                "error",
+                "always"
+            ],
+            "prettier/prettier": 0,
+            "sort-keys": [
+                "error",
+                "asc",
+                {
+                    "caseSensitive": true,
+                    "natural": true
+                }
+            ],
+            "sort-requires/sort-requires": 2
+        }
+    },
     "name": "backend",
-    "version": "0.0.0",
+    "prettier": {
+        "printWidth": 100,
+        "singleQuote": true,
+        "tabWidth": 2
+    },
     "private": true,
     "scripts": {
         "start": "pm2 start ecosystem.config.json"
     },
-    "dependencies": {
-        "@google-cloud/language": "^2.0.1",
-        "axios": "^0.18.0",
-        "body-parser": "^1.18.3",
-        "btoa-atob": "^0.1.2",
-        "compromise": "^11.13.1",
-        "connect-timeout": "^1.9.0",
-        "cookie-parser": "~1.4.4",
-        "cors": "^2.8.5",
-        "express": "^4.16.4",
-        "express-async-handler": "^1.1.4",
-        "express-cluster": "0.0.5",
-        "express-toobusy": "0.0.3",
-        "google-search-scraper": "^0.1.0",
-        "googleapis": "^37.2.0",
-        "helmet": "^3.15.1",
-        "ip": "^1.1.5",
-        "moment": "^2.24.0",
-        "mysql": "^2.16.0",
-        "os": "^0.1.1",
-        "p-limit": "^2.2.0",
-        "passport": "^0.4.0",
-        "passport-google-oauth20": "^1.0.0",
-        "promise-limit": "^2.7.0",
-        "request": "^2.88.0",
-        "request-promise": "^4.2.4",
-        "response-time": "^2.3.2",
-        "sqreen": "^1.29.3",
-        "unique-string": "^1.0.0"
-    }
+    "version": "0.0.0"
 }
